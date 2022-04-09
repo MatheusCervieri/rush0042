@@ -43,25 +43,24 @@ void	makelinearray(int x, int linetype)
 	lineposition = 1; // A line position é a posição da linha que eu estou escrevendo no array.
 	if(linetype == 0) //se for uma linha do tipo 0 - ou seja, for primeira ou última linha. 
 	{
-	posicaoinicial = 'A';
+	posicaoinicial = 'A'; 
 	posicaomeio = 'B';
 	posicaofinal = 'C';
 	while (lineposition <= x) //enquanto a posição da linha for menor ou igual que o tamanho da linha (o valor de x). 
 	{
-		if(lineposition == 1)
+		if(lineposition == 1) //se for a primeira posição da linha. 
 		{
-		
-		linecaracters[lineposition] = posicaoinicial;
+		ft_putchar(posicaoinicial); //escrever o caracter da posicao inicial.
 		}
-		else if (lineposition == x)
+		else if (lineposition == x) // se for última  posicao da linha 
 		{
-		linecaracters[lineposition] = posicaofinal;	
+		ft_putchar(posicaofinal); //escrever o caracter da posicaofinal
 		}
-		else
+		else // se for as linhas do meio 
 		{
-		linecaracters[lineposition] = posicaomeio;
+		ft_putchar(posicaomeio); //escre o caracter da posicao do meio. 
 		}
-		lineposition++;
+		lineposition++; //é só o que faz o while funcionar. 
 	}
 	}
 	else 
@@ -69,31 +68,33 @@ void	makelinearray(int x, int linetype)
 	posicaoinicial = 'B';
 	posicaomeio = ' ';
 	posicaofinal = 'B';
-	while (lineposition <= x)
+
+	//todo esse while é para escrever a linha. 
+	while (lineposition <= x) //enquanto a posição da linha for menor ou igual que o tamanho da linha (o valor de x). 
 	{
-		if(lineposition == 1)
+		if(lineposition == 1) //se for a primeira posição da linha. 
 		{
-		linecaracters[lineposition] = posicaoinicial;	
+		ft_putchar(posicaoinicial); //escrever o caracter da posicao inicial.
 		}
-		else if (lineposition == x)
+		else if (lineposition == x) // se for última  posicao da linha 
 		{
-		linecaracters[lineposition] = posicaofinal;	
+		ft_putchar(posicaofinal); //escrever o caracter da posicaofinal
 		}
-		else
+		else // se for as linhas do meio 
 		{
-		linecaracters[lineposition] = posicaomeio;
+		ft_putchar(posicaomeio); //escre o caracter da posicao do meio. 
 		}
-		lineposition++;
+		lineposition++; //é só o que faz o while funcionar. 
 	}
 	}
-	linecaracters[lineposition] = '\n';
+	ft_putchar('\n');
 	//adicionar os elementos no meu array final
 	
 	//descobrir a última posição da última linha escrita no array para poder adicionar um elemento nele. 
 	//Se eu precisasse mudar cada elemento da posição depois. 
 	//while (board != '\n')
 	//
-	printarray(linecaracters);
+	
 	
 }
 
