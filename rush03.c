@@ -2,9 +2,12 @@
 
 void	makelinearray(int x, int linetype);
 void	ft_putchar(char c);
-void	printarray(char *boardarray);
+void	printarray(char *printedarray);
+
+
 void	rush(int x, int y)
 {
+	//escreve o eixo y
 	int contadordelinhas = 1;
 	while (contadordelinhas <= y)
 	{
@@ -24,8 +27,6 @@ void	rush(int x, int y)
 	contadordelinhas++;
 	}
 	
-	
-	
 }
 
 void	makelinearray(int x, int linetype)
@@ -35,7 +36,7 @@ void	makelinearray(int x, int linetype)
 	char posicaomeio;
 	char posicaofinal;
 	int lineposition;
-	lineposition = 0;
+	lineposition = 1;
 	if(linetype == 0)
 	{
 	posicaoinicial = 'A';
@@ -43,7 +44,7 @@ void	makelinearray(int x, int linetype)
 	posicaofinal = 'C';
 	while (lineposition <= x)
 	{
-		if(lineposition == 0)
+		if(lineposition == 1)
 		{
 		linecaracters[lineposition] = posicaoinicial;	
 		}
@@ -65,7 +66,7 @@ void	makelinearray(int x, int linetype)
 	posicaofinal = 'B';
 	while (lineposition <= x)
 	{
-		if(lineposition == 0)
+		if(lineposition == 1)
 		{
 		linecaracters[lineposition] = posicaoinicial;	
 		}
