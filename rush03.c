@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-void	makelinearray(int x, int linetype);
+//ABBBBBC
+//A     C
+//ABBBBBC
+
+void	makelinearray(int x, int linetype); //Cria a linha com o tamanho horizontal x e tem dois tipos de linhas que nós definimos: 'linha do meio' 'linha inicial/final'
 void	ft_putchar(char c);
 void	printarray(char *printedarray);
 
@@ -9,17 +13,17 @@ void	rush(int x, int y)
 {
 	//escreve o eixo y
 	int contadordelinhas = 1;
-	while (contadordelinhas <= y)
+	while (contadordelinhas <= y) //while repete até não poder mais. 
 	{
-	if (contadordelinhas == 1)
+	if (contadordelinhas == 1) //se for a primeira linha
+	{
+	makelinearray(x,0); 
+	}
+	else if(contadordelinhas == y) // se for a última linha
 	{
 	makelinearray(x,0);
 	}
-	else if(contadordelinhas == y)
-	{
-	makelinearray(x,0);
-	}
-	else
+	else //se for qualquer outra linha
 	{
 	makelinearray(x,1);	
 	}
@@ -31,22 +35,23 @@ void	rush(int x, int y)
 
 void	makelinearray(int x, int linetype)
 {
-	char linecaracters[x + 1];
+	char linecaracters[x + 1]; //array que vai ter o tamanho da linha.  ABBBC
 	char posicaoinicial;
 	char posicaomeio;
 	char posicaofinal;
 	int lineposition;
-	lineposition = 1;
-	if(linetype == 0)
+	lineposition = 1; // A line position é a posição da linha que eu estou escrevendo no array.
+	if(linetype == 0) //se for uma linha do tipo 0 - ou seja, for primeira ou última linha. 
 	{
 	posicaoinicial = 'A';
 	posicaomeio = 'B';
 	posicaofinal = 'C';
-	while (lineposition <= x)
+	while (lineposition <= x) //enquanto a posição da linha for menor ou igual que o tamanho da linha (o valor de x). 
 	{
 		if(lineposition == 1)
 		{
-		linecaracters[lineposition] = posicaoinicial;	
+		
+		linecaracters[lineposition] = posicaoinicial;
 		}
 		else if (lineposition == x)
 		{
